@@ -9,6 +9,10 @@ module.exports = {
         mainDarkColor: "#222222",
         mainDarkerColor: "#111111",
       },
+      screens: {
+        xs: "400px",
+        sl: "800px",
+      },
     },
   },
   plugins: [],

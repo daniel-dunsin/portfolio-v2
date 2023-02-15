@@ -43,7 +43,7 @@ const socials: SocialsProps = [
 ];
 
 const Sidebar: FC = () => {
-  const { sidebarOpened } = useGlobalContext();
+  const { sidebarOpened, setSidebarOpened } = useGlobalContext();
   const location = useLocation();
   return (
     <aside
@@ -69,7 +69,13 @@ const Sidebar: FC = () => {
             </>
           );
           return (
-            <li key={index} className="link">
+            <li
+              key={index}
+              className="link"
+              onClick={() => {
+                setSidebarOpened(false);
+              }}
+            >
               {content}
             </li>
           );
