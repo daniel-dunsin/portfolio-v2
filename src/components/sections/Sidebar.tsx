@@ -3,9 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import { Github, Linkedin, Twiiter } from "../Icons";
 import { BiEnvelope } from "react-icons/bi";
-import Fade from "react-reveal/Fade";
 
-const links = [
+type LinksProps = Array<{ href: string; text: string }>;
+type SocialsProps = Array<{ href: string; icon: ReactElement }>;
+
+const links: LinksProps = [
   {
     href: "/",
     text: "Home",
@@ -21,7 +23,7 @@ const links = [
   },
 ];
 
-const socials = [
+const socials: SocialsProps = [
   {
     href: "linkedin",
     icon: <Linkedin fill="#fff" size={24} />,
@@ -40,7 +42,7 @@ const socials = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
   const { sidebarOpened } = useGlobalContext();
   const location = useLocation();
   return (
@@ -53,7 +55,10 @@ const Sidebar = () => {
         {links.map((link, index) => {
           const content = (
             <>
-              <Link to={link.href} className="mb-[4px] text-[20px]">
+              <Link
+                to={link.href}
+                className="mb-[4px] text-[20px] sm:text-[25px] md:text-[30px]"
+              >
                 {link.text}
               </Link>
               <div

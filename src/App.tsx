@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./components/sections/Navbar";
-import Sidebar from "./components/sections/Sidebar.jsx";
+import Sidebar from "./components/sections/Sidebar";
 import Error from "./pages/404";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
