@@ -28,7 +28,7 @@
   transition-delay: 0.4s;
 }
 
-.link .underline {
+.underline {
   width: 0;
   height: 3px;
   transition: 0.4s;
@@ -92,4 +92,33 @@
 }
 .socials:nth-of-type(4) {
   transition-delay: 0.8s;
+}
+
+/* experience */
+.experience .underline {
+  @apply bg-mainDarkColor;
+}
+.experience-in-view .underline {
+  width: 100%;
+}
+
+/* skills */
+.skills-container::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.skills-container::-webkit-scrollbar-thumb {
+  display: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.skills-container::-webkit-scrollbar-track {
+  display: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
