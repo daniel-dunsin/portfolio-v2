@@ -25,7 +25,7 @@ const Portfolio = () => {
             return (
               <section key={index}>
                 <Title topOfPage={false} text={project.name} smallSize={true} />
-                <div className="grid items-center justify-start flex-wrap gap-[1rem] md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
+                <div className="flex items-center justify-start overflow-x-scroll horizontal-scroll gap-[1rem] pb-2">
                   {project.projects.map((project, index) => {
                     return <SingleProject key={index} {...project} />;
                   })}
