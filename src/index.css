@@ -11,6 +11,23 @@
   font-family: "questrial";
 }
 
+*::-webkit-scrollbar {
+  /* background-color: red; */
+  background-color: #777;
+  border-radius: 20px;
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  /* width: 100%; */
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar {
+  background-color: transparent;
+  height: 6px;
+}
+
 .container {
   @apply w-full max-w-[1200px] mx-auto md:px-[2rem] px-[1rem];
 }
@@ -102,23 +119,10 @@
   width: 100%;
 }
 
-/* skills */
-.skills-container::-webkit-scrollbar {
-  display: none;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
-.skills-container::-webkit-scrollbar-thumb {
-  display: none;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
-
-.skills-container::-webkit-scrollbar-track {
-  display: none;
-  height: 0;
-  width: 0;
-  overflow: hidden;
+.hoverText {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(255, 255, 255, 0.4)
+  );
 }

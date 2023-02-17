@@ -25,7 +25,7 @@ const links: LinksProps = [
 
 const socials: SocialsProps = [
   {
-    href: "linkedin",
+    href: "https://www.linkedin.com/in/daniel-adejare-551a20237",
     icon: <Linkedin fill="#fff" size={24} />,
   },
   {

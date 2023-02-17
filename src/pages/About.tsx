@@ -6,25 +6,22 @@ import { useGlobalContext } from "../context";
 import { BiCommentDots, BiPaperclip, BiPointer } from "react-icons/bi";
 import {
   CSS3,
+  Github,
+  Gitlab,
   HTML5,
   Javascript,
   NextJS,
+  Postman,
   ReactJS,
   ReduxJS,
   StyledComponents,
   TailwindCSS,
   Typescript,
+  VSCode,
 } from "../components/Icons";
 import ScrollContainers from "../components/sections/ScrollContainers";
-
-type myDetailsProps = {
-  question: string;
-  answer: string;
-};
-type skillsProps = {
-  icon: React.ReactElement;
-  name: string;
-};
+import DisplayContainer from "../components/UI/displayContainers";
+import { skillsProps, myDetailsProps, toolsProps } from "../types/types";
 
 const myDetails: myDetailsProps[] = [
   { question: "Full Name", answer: "Adejare Daniel Oluwdunsin" },
@@ -75,15 +72,19 @@ const skills: skillsProps[] = [
   },
 ];
 
+const tools: toolsProps[] = [
+  { icon: <VSCode size={27} fill={"#000"} />, name: "Visual Studio Code" },
+  { icon: <Github size={27} fill={"#000"} />, name: "Github" },
+  { icon: <Gitlab size={27} fill={"#000"} />, name: "Gitlab" },
+  { icon: <Postman size={27} fill={"#000"} />, name: "Postman" },
+];
+
 const About = () => {
-  const [width, setWidth] = useState<number>(0);
+  const [width, setWidth] = useState<number>(window.innerWidth);
   const skillsContainer = useRef<any>(null);
 
   const { companies, selectCompany, experienceInView } = useGlobalContext();
 
-  React.useEffect(() => {
-    console.log(skillsContainer?.current);
-  }, []);
   React.useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
@@ -104,7 +105,11 @@ const About = () => {
             />
           </div>
           <div className="flex-1 w-full">
-            <Fade direction={width < 800 ? "left" : "up"} duration={1000}>
+            <Fade
+              direction={width < 800 ? "left" : "up"}
+              duration={1000}
+              triggerOnce={true}
+            >
               <h1 className="text-mainDarkColor text-[25px] sl:text-[40px] font-bold">
                 Adejare Daniel
               </h1>
@@ -114,6 +119,7 @@ const About = () => {
               direction={width < 800 ? "left" : "up"}
               duration={1000}
               delay={400}
+              triggerOnce={true}
             >
               <div className="flex flex-col gap-y-2 my-4 text-[17px] max-w-[600px] text-mainDarkColor">
                 <p>
@@ -135,6 +141,7 @@ const About = () => {
                     key={index}
                     direction={width < 800 ? "left" : "up"}
                     duration={1000}
+                    triggerOnce={true}
                     delay={(index + 1) * 400}
                   >
                     <div className="flex items-center gap-x-2 flex-wrap">
@@ -150,12 +157,12 @@ const About = () => {
 
         <Title text="Experience." topOfPage={false} />
         <div className="flex gap-y-6 gap-x-[3rem] items-start my-8 md:flex-row flex-col">
-          <div className="flex overflow-x-scroll w-full max-w-fit pb-3 flex-1 pt-2">
+          <div className="flex overflow-x-scroll w-full max-w-fit pb-3 flex-1 pt-2 horizontal-scrollbar">
             <div className="flex md:flex-col gap-2 md:items-start md:justify-start justify-center items-center w-fit">
               {companies?.map((company, index) => {
                 return (
                   <article
-                    className={`flex flex-col experience cursor-pointer max-w-fit ${
+                    className={`flex flex-col experience cursor-pointer min-w-fit max-w-fit ${
                       company === experienceInView?.company &&
                       "experience-in-view"
                     }`}
@@ -203,7 +210,7 @@ const About = () => {
               {experienceInView?.skillsets?.map((skill, index) => {
                 return (
                   <span
-                    className="max-w-fit px-4 py-2 bg-mainDarkGrayColor text-white text-[15px] rounded-md"
+                    className="max-w-fit px-4 py-2 bg-mainDarkColor text-white text-[15px] rounded-md"
                     key={index}
                   >
                     {skill}
@@ -219,29 +226,20 @@ const About = () => {
           subtitle="Below is a list of web technologies i use."
           topOfPage={false}
         />
-        <ScrollContainers width={1350}>
+        <ScrollContainers width={620} displayWidgets={true}>
           {skills.map((skill, index: number) => {
-            return (
-              <Fade
-                direction="up"
-                triggerOnce={true}
-                key={index}
-                delay={index * 50}
-                fraction={0.1}
-              >
-                <article
-                  className="h-[180px] py-6 px-4 min-w-[180px] max-w-fit bg-mainDarkColor shadow-md rounded-[10px]"
-                  key={index}
-                >
-                  <span className="w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center">
-                    {skill.icon}
-                  </span>
-                  <h2 className="text-white font-bold text-[18px] mt-4">
-                    {skill.name}
-                  </h2>
-                </article>
-              </Fade>
-            );
+            return <DisplayContainer key={index} {...skill} />;
+          })}
+        </ScrollContainers>
+
+        <Title
+          text="Tools."
+          subtitle="Discover what tools i use for work."
+          topOfPage={false}
+        />
+        <ScrollContainers width={150} displayWidgets={false}>
+          {tools.map((tool, index: number) => {
+            return <DisplayContainer key={index} {...tool} />;
           })}
         </ScrollContainers>
       </section>
