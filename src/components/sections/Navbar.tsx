@@ -12,8 +12,8 @@ const Navbar = () => {
           <img
             src={
               sidebarOpened
-                ? "./images/logo-white.png"
-                : "./images/logo-black.png"
+                ? "../images/logo-white.png"
+                : "../images/logo-black.png"
             }
             alt="Logo"
             loading="lazy"

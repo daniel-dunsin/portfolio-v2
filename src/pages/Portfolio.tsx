@@ -20,11 +20,15 @@ const Portfolio = () => {
         />
         <FilterButtons />
 
-        <div className="mt-4">
+        <div className="mt-4 mb-8">
           {filteredProjects.map((project, index: number) => {
             return (
               <section key={index}>
-                <Title topOfPage={false} text={project.name} smallSize={true} />
+                <Title
+                  topOfPage={false}
+                  text={project.name + ` (${project.projects.length})`}
+                  smallSize={true}
+                />
                 <div className="flex items-center justify-start overflow-x-scroll horizontal-scroll gap-[1rem] pb-2">
                   {project.projects.map((project, index) => {
                     return <SingleProject key={index} {...project} />;

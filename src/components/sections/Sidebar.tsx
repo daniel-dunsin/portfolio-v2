@@ -62,7 +62,7 @@ const Sidebar: FC = () => {
                 {link.text}
               </Link>
               <div
-                className={`underline ${
+                className={`custom-underline ${
                   location.pathname === link.href && "link-in-view"
                 }`}
               ></div>

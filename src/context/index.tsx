@@ -46,7 +46,7 @@ const myExperience: myExperienceProps[] = [
   },
 ];
 
-const projects: ProjectCategories[] = [
+export const projects: ProjectCategories[] = [
   {
     id: 0,
     name: "Web Pages",
@@ -221,7 +221,7 @@ const projects: ProjectCategories[] = [
           live: "",
           github: "/portfolio-v2",
         },
-        image: "",
+        image: "daniel-dunsin.png",
         tools: ["React JS", "Typescript", "Context API", "Tailwind CSS"],
       },
       {
@@ -260,7 +260,7 @@ const projects: ProjectCategories[] = [
           live: "https://daniel-memory-game.vercel.app",
           github: "/Memory-Game",
         },
-        image: "",
+        image: "memory-game.png",
         tools: ["React JS", "CSS", "Typescript"],
       },
       {
@@ -293,7 +293,7 @@ const projects: ProjectCategories[] = [
           live: "https://daniel-button-editor.vercel.app",
           github: "/Button-Editor",
         },
-        image: "button-editor",
+        image: "button-editor.png",
         tools: ["Next JS", "Styled Components", "Typescript"],
       },
     ],

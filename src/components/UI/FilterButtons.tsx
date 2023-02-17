@@ -5,7 +5,7 @@ const FilterButtons = () => {
   const { filterButtons, selectFilterButton, selectedFilterButton } =
     useGlobalContext();
   return (
-    <div className="max-w-[90vw] overflow-x-scroll horizontal-scrollbar  mx-auto">
+    <div className="max-w-[90vw] overflow-x-scroll horizontal-scrollbar  mx-auto pb-2">
       <header className="flex items-center justify-center min-w-fit">
         {filterButtons.map((button, index: number) => {
           return (

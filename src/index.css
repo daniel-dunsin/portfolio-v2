@@ -25,7 +25,7 @@
 
 .horizontal-scrollbar::-webkit-scrollbar {
   background-color: transparent;
-  height: 6px;
+  height: 5px;
 }
 
 .container {
@@ -45,20 +45,20 @@
   transition-delay: 0.4s;
 }
 
-.underline {
+.custom-underline {
   width: 0;
   height: 3px;
   transition: 0.4s;
   background-color: white;
   margin: 0 auto;
 }
-.link .underline.link-in-view {
+.link .custom-underline.link-in-view {
   width: 100%;
 }
-.link:hover .underline {
+.link:hover .custom-underline {
   width: 100%;
 }
-.sidebar-hidden .underline.link-in-view {
+.sidebar-hidden .custom-underline.link-in-view {
   width: 0% !important;
 }
 
@@ -112,17 +112,29 @@
 }
 
 /* experience */
-.experience .underline {
+.experience .custom-underline {
   @apply bg-mainDarkColor;
 }
-.experience-in-view .underline {
+.experience-in-view .custom-underline {
   width: 100%;
+}
+.hoverImg:hover .hoverText {
+  width: 100%;
+  opacity: 1;
 }
 
 .hoverText {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.9) 0%,
     rgba(255, 255, 255, 0.4) 90%
-  );
+  ); */
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 300ms;
+}
+
+.hoverText:hover {
+  width: 100%;
+  opacity: 1;
 }
