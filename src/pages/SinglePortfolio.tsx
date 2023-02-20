@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BiPaperclip, BiShare } from "react-icons/bi";
-import { BsArrowUpRight, BsShare } from "react-icons/bs";
+import { BiLink, BiPaperclip, BiShare } from "react-icons/bi";
+import { BsArrowUpRight, BsGithub, BsShare } from "react-icons/bs";
 import { useParams } from "react-router-dom";
 import Container from "../components/sections/Container";
 import Title from "../components/UI/Title";
@@ -54,23 +54,29 @@ const SinglePortfolio = () => {
           })}
         </div>
         <h3 className="mt-4 font-bold text-[24px] mb-2">Links.</h3>
-        <div className="flex gap-y-2 gap-x-4 w-full sm:flex-row flex-col">
+        <div className="flex gap-y-2 gap-x-4 w-full sm:flex-row flex-col items-start">
           {project?.links?.live && (
             <a
               target={"_blank"}
               href={project?.links?.live}
-              className="underline flex items-center gap-x-2 min-w-fit"
+              className="items-center px-4 py-2 rounded-md bg-mainDarkColor text-white cursor-pointer"
             >
-              View project live <BsArrowUpRight />
+              View project live{" "}
+              <span className="inline-block ml-2 align-middle">
+                <BiLink />
+              </span>
             </a>
           )}
           {project?.links?.github && (
             <a
               target={"_blank"}
               href={"https://github.com/daniel-dunsin" + project?.links?.github}
-              className="underline flex items-center gap-x-2 min-w-fit"
+              className="items-center px-4 py-2 rounded-md bg-mainDarkColor text-white cursor-pointer"
             >
-              View on github <BsArrowUpRight />
+              View on github{" "}
+              <span className="inline-block ml-2 align-middle">
+                <BsGithub />
+              </span>
             </a>
           )}
         </div>

@@ -157,7 +157,7 @@ const About = () => {
 
         <Title text="Experience." topOfPage={false} />
         <div className="flex gap-y-6 gap-x-[3rem] items-start my-8 md:flex-row flex-col">
-          <div className="flex overflow-x-scroll w-full max-w-fit pb-3 flex-1 pt-2 horizontal-scrollbar">
+          <div className="flex overflow-x-scroll w-[100%] max-w-fit pb-3 flex-1 pt-2 horizontal-scrollbar min-w-fit">
             <div className="flex md:flex-col gap-2 md:items-start md:justify-start justify-center items-center min-w-fit">
               {companies?.map((company, index) => {
                 return (

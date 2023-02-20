@@ -33,7 +33,7 @@ const socials: SocialsProps = [
     icon: <Github fill="#fff" size={24} />,
   },
   {
-    href: "twitter",
+    href: "https://twitter.com/DannyWrld12?s=09",
     icon: <Twiiter fill="#fff" size={24} />,
   },
   {
