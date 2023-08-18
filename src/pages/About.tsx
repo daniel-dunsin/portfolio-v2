@@ -6,6 +6,7 @@ import { useGlobalContext } from "../context";
 import { BiCommentDots, BiPaperclip, BiPointer } from "react-icons/bi";
 import {
   CSS3,
+  Cypress,
   Github,
   Gitlab,
   HTML5,
@@ -14,6 +15,7 @@ import {
   Postman,
   ReactJS,
   ReduxJS,
+  Sass,
   StyledComponents,
   TailwindCSS,
   Typescript,
@@ -30,7 +32,7 @@ const myDetails: myDetailsProps[] = [
   { question: "Email", answer: "adejaredaniel12@gmail.com" },
   { question: "Nationality", answer: "Nigerian" },
   { question: "Education Level", answer: "Undergraduate" },
-  { question: "Years of experience", answer: "1+ years" },
+  { question: "Years of experience", answer: "2+ years" },
 ];
 
 const skills: skillsProps[] = [
@@ -69,6 +71,14 @@ const skills: skillsProps[] = [
   {
     name: "Redux Toolkit",
     icon: <ReduxJS size={27} fill={"#000"} />,
+  },
+  {
+    name: "Cypress",
+    icon: <Cypress size={27} fill={"#000"} />,
+  },
+  {
+    name: "Sass",
+    icon: <Sass size={27} fill={"#000"} />,
   },
 ];
 
@@ -123,10 +133,12 @@ const About = () => {
             >
               <div className="flex flex-col gap-y-2 my-4 text-[17px] max-w-[600px] text-mainDarkColor">
                 <p>
-                  I am a frontend developer residing in Nigeria. I have over 1
-                  year experience in building scalable, user expeirence, user
-                  interface and accessible websites with HTML, CSS and
-                  JavaScript, as well as some of their libraries and frameworks.
+                  I am an innovative frontend developer with 2 years of
+                  experience in developing and maintaining web applications
+                  using HTML, CSS and JavaScript, as well as their frameworks
+                  and libraries. I am skilled in collaborating with
+                  cross-functional teams, integrating third-party services and
+                  APIs and optimizing web applications for performance.
                 </p>
                 <p>
                   I understand the rudiments of web optimization and
@@ -152,6 +164,18 @@ const About = () => {
                 );
               })}
             </div>
+            <Fade
+              direction={width < 800 ? "left" : "up"}
+              duration={1000}
+              triggerOnce={true}
+              delay={2400}
+            >
+              <a href="https://drive.google.com/file/d/1zNzHQwUMSspctu_PWfxhV_k0Y4-6iAHU/view?usp=drive_link">
+                <button className="mt-4 max-w-fit px-4 py-2 bg-mainDarkColor text-white text-[15px] rounded-md">
+                  Download CV
+                </button>
+              </a>
+            </Fade>
           </div>
         </div>
 
@@ -199,22 +223,6 @@ const About = () => {
                     <BiPaperclip className="inline-block mr-2" />
                     {work}
                   </p>
-                );
-              })}
-            </div>
-
-            <h3 className="text-[1.1rem] font-bold text-mainDarkColor mt-4 mb-3">
-              Web technologies used:
-            </h3>
-            <div className="flex flex-row gap-4 flex-wrap">
-              {experienceInView?.skillsets?.map((skill, index) => {
-                return (
-                  <span
-                    className="max-w-fit px-4 py-2 bg-mainDarkColor text-white text-[15px] rounded-md"
-                    key={index}
-                  >
-                    {skill}
-                  </span>
                 );
               })}
             </div>

@@ -42,16 +42,20 @@ const SinglePortfolio = () => {
         </h3>
         <h3 className="font-bold text-[24px] mt-4">Tools.</h3>
         <div className="mt-2 flex flex-wrap gap-4">
-          {project?.tools?.map((tool, index) => {
-            return (
-              <span
-                className="items-center px-4 py-2 rounded-md bg-mainDarkColor text-white cursor-pointer"
-                key={index}
-              >
-                {tool}
-              </span>
-            );
-          })}
+          {project?.tools ? (
+            project?.tools?.map((tool, index) => {
+              return (
+                <span
+                  className="items-center px-4 py-2 rounded-md bg-mainDarkColor text-white cursor-pointer"
+                  key={index}
+                >
+                  {tool}
+                </span>
+              );
+            })
+          ) : (
+            <>Undisclosed</>
+          )}
         </div>
         <h3 className="mt-4 font-bold text-[24px] mb-2">Links.</h3>
         <div className="flex gap-y-2 gap-x-4 w-full sm:flex-row flex-col items-start">

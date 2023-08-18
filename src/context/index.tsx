@@ -14,10 +14,28 @@ const AppContext = createContext({} as IContext);
 
 const myExperience: myExperienceProps[] = [
   {
+    company: "Edssistance",
+    start_date: "March 2023",
+    end_date: "Present",
+    position: "Frontend developer (contract)",
+    works: [
+      "Developing and maintaining web applications using client side technologies",
+      "Integrating backend APIs and data",
+      "Developing features to enhance user experience ",
+    ],
+    skillsets: [
+      "React JS",
+      "Typescript",
+      "Tailwind CSS",
+      "Redux toolkit",
+      "Git & Github",
+    ],
+  },
+  {
     company: "CodeAlgo Academy",
     start_date: "Oct 2022",
     end_date: "Present",
-    position: "Frontend developer intern",
+    position: "Frontend developer (part-time)",
     works: [
       "Converted figma designs into reusable, testable and well-defined codes",
       "Implemented APIs on the frontend",
@@ -28,7 +46,7 @@ const myExperience: myExperienceProps[] = [
       "Typescript",
       "Tailwind CSS",
       "Redux toolkit",
-      "Jest",
+      "Cypress",
       "Git & Gitlab",
     ],
   },
@@ -47,6 +65,64 @@ const myExperience: myExperienceProps[] = [
 ];
 
 export const projects: ProjectCategories[] = [
+  {
+    id: 1,
+    name: "Web Applications",
+    projects: [
+      {
+        name: "CodeAlgo Academy",
+        desc: "I worked with a tem of frontend developers to build this Learning Management System (LMS) where kids are able to learn to code through gamified lessons",
+        id: 25,
+        links: {
+          live: "https://codealgoacademy.com",
+        },
+        image: "codealgo.png",
+      },
+
+      {
+        name: "Edssistance",
+        desc: "I worked togther with a backend developer to build this role-based School Managment System which helps school admins, parents, staff and students manage their activites seamlessly",
+        id: 105,
+        links: {
+          live: "https://edssistance.com",
+        },
+        image: "edssistance.png",
+      },
+      {
+        name: "Dblog",
+        desc: "Dblog is a blog app with a lot of functionalites. Users can login with google, facebook or their email and password. The homapage lists the blogs that have been created by different users. Users can view others account details as well as yours. Users can create, read, edit and delete posts. Users can update their account details",
+        id: 12,
+        links: {
+          live: "https://dblog-dc3a4.web.app",
+          github: "/dblog-v2",
+        },
+        image: "dblog.png",
+        tools: ["React JS", "Tailwind CSS", "Firebase", "Redux Js"],
+      },
+      {
+        name: "Amado",
+        desc: "This is an e-commerce app which features great functionalities and sleek design. Users are able to view the list of products. Users can filter the products based on size, color and many other preferences. Products can be added to cart and the quantity added can be edited in the cart page",
+        id: 13,
+        links: {
+          live: "https://daniel-amado.netlify.app",
+          github: "/Amado-e-commerce",
+        },
+        image: "amado.png",
+        tools: ["React JS", "Bootstrap", "Context API"],
+      },
+      {
+        name: "Github Search",
+        desc: "This is a mini github clone, which uses the github api to provide results based on the users search input. The search results includes the related commits, topics, users and repositories. Ability to view users profile, their repositories, followers and people they follow",
+        id: 14,
+        links: {
+          live: "https://daniel-github-search.vercel.app",
+          github: "/Github-Search",
+        },
+        image: "github.png",
+        tools: ["Next JS", "Typescript", "Tailwind CSS", "Context API"],
+      },
+    ],
+  },
   {
     id: 0,
     name: "Web Pages",
@@ -127,73 +203,6 @@ export const projects: ProjectCategories[] = [
         },
         image: "nft.png",
         tools: ["React JS", "CSS"],
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "Web Applications",
-    projects: [
-      {
-        name: "Dblog",
-        desc: "Dblog is a blog app with a lot of functionalites. Users can login with google, facebook or their email and password. The homapage lists the blogs that have been created by different users. Users can view others account details as well as yours. Users can create, read, edit and delete posts. Users can update their account details",
-        id: 12,
-        links: {
-          live: "https://dblog-dc3a4.web.app",
-          github: "/dblog-v2",
-        },
-        image: "dblog.png",
-        tools: ["React JS", "Tailwind CSS", "Firebase", "Redux Js"],
-      },
-      {
-        name: "Amado",
-        desc: "This is an e-commerce app which features great functionalities and sleek design. Users are able to view the list of products. Users can filter the products based on size, color and many other preferences. Products can be added to cart and the quantity added can be edited in the cart page",
-        id: 13,
-        links: {
-          live: "https://daniel-amado.netlify.app",
-          github: "/Amado-e-commerce",
-        },
-        image: "amado.png",
-        tools: ["React JS", "Bootstrap", "Context API"],
-      },
-      {
-        name: "Github Search",
-        desc: "This is a mini github clone, which uses the github api to provide results based on the users search input. The search results includes the related commits, topics, users and repositories. Ability to view users profile, their repositories, followers and people they follow",
-        id: 14,
-        links: {
-          live: "https://daniel-github-search.vercel.app",
-          github: "/Github-Search",
-        },
-        image: "github.png",
-        tools: ["Next JS", "Typescript", "Tailwind CSS", "Context API"],
-      },
-      {
-        name: "Becipe",
-        desc: "This is a web app built upon TheMealDB API. It displays a list of food and their recipes, ingredients, and cooking instructions. Data is been cached by using react query thereby making api requests and the website as a whole very fast",
-        id: 15,
-        links: {
-          live: "https://daniel-becipe.vercel.app",
-          github: "/Becipe",
-        },
-        image: "becipe.png",
-        tools: [
-          "React JS",
-          "Tailwind CSS",
-          "Context API",
-          "Typescript",
-          "React Query",
-        ],
-      },
-      {
-        name: "Countries List",
-        desc: "This is a web app built upon the rest countries API. It displays list of countries and allows users to view the countries details",
-        id: 16,
-        links: {
-          live: "https://daniel-rest-countries.vercel.app",
-          github: "/Rest-Countries",
-        },
-        image: "rest-countries.png",
-        tools: ["React JS", "Typescript", "Tailwind CSS", "Redux Toolkit"],
       },
     ],
   },
