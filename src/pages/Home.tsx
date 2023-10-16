@@ -22,7 +22,7 @@ const Home = () => {
         <Fade direction="up" delay={1700}>
           <p className="text-[1rem] max-w-[600px] leading-[1.2] mt-4">
             I build things for the web! 🙂 <br />
-            I'm a frontend developer that possesses passion for User Interface,
+            I'm a full stack developer that possesses passion for User Interface,
             User Experience, accessible and responsive websites
           </p>
         </Fade>

@@ -17,14 +17,17 @@ const myExperience: myExperienceProps[] = [
     company: "Edssistance",
     start_date: "March 2023",
     end_date: "Present",
-    position: "Frontend developer (contract)",
+    position: "Full stack developer (contract)",
     works: [
-      "Developing and maintaining web applications using client side technologies",
-      "Integrating backend APIs and data",
-      "Developing features to enhance user experience ",
+      "Collaborated with UI/UX designers, software engineers and product manager to create an easy-to-use product",
+      "Stayed in touch with clients from start to finish, making sure they were part of the journey. Also, shared project ideas and progress with them and the project owner.",
+      "Developed a safe and secure wallet system and payment gateway",
+      "Developed a seucre role-based authentication system",
     ],
     skillsets: [
       "React JS",
+      "Node JS",
+      "Mongo DB",
       "Typescript",
       "Tailwind CSS",
       "Redux toolkit",
@@ -35,11 +38,13 @@ const myExperience: myExperienceProps[] = [
     company: "CodeAlgo Academy",
     start_date: "Oct 2022",
     end_date: "Present",
-    position: "Frontend developer (part-time)",
+    position: "Frontend developer",
     works: [
-      "Converted figma designs into reusable, testable and well-defined codes",
-      "Implemented APIs on the frontend",
-      "Optimized webpages for maximum speed and scalability",
+      "Led the architectural planning and execution of solutions by utilizing the React.js JavaScript framework to craft diverse front-end screens. Employed pre-existing components from NPM (Node Package Manager) and seamlessly integrated them with the Redux library, ensuring seamless connectivity with API endpoints.",
+      "Developed code that works smoothly across multiple web browsers, ensuring a broad user reach.",
+      "Implemented performance enhancements such as lazy loading, code splitting, and minimizing HTTP requests to improve website speed and loading times.",
+      "Worked closely with back-end developers to ensure a seamless integration of the front-end with the back-end systems.",
+      "Designed front-end systems with scalability in mind, allowing for future expansion and new feature integration.",
     ],
     skillsets: [
       "Next JS",
@@ -81,7 +86,7 @@ export const projects: ProjectCategories[] = [
 
       {
         name: "Edssistance",
-        desc: "I worked togther with a backend developer to build this role-based School Managment System which helps school admins, parents, staff and students manage their activites seamlessly",
+        desc: "I worked with other full stack developers to build this role-based School Managment System which helps school admins, parents, staff and students manage their activites seamlessly",
         id: 105,
         links: {
           live: "https://edssistance.com",
@@ -90,7 +95,7 @@ export const projects: ProjectCategories[] = [
       },
       {
         name: "Dblog",
-        desc: "Dblog is a blog app with a lot of functionalites. Users can login with google, facebook or their email and password. The homapage lists the blogs that have been created by different users. Users can view others account details as well as yours. Users can create, read, edit and delete posts. Users can update their account details",
+        desc: "DBlog is a feature-rich blog application that offers a wide range of functionalities. Users can conveniently log in using their Google, Facebook, or email and password credentials. The homepage showcases a collection of blogs created by various users. With Dblog, users can explore other users' account details alongside their own. Furthermore, users have the flexibility to create, read, edit, and delete their blog posts. Dblog also empowers users to easily update their account information.",
         id: 12,
         links: {
           live: "https://dblog-dc3a4.web.app",
@@ -100,8 +105,26 @@ export const projects: ProjectCategories[] = [
         tools: ["React JS", "Tailwind CSS", "Firebase", "Redux Js"],
       },
       {
+        name: "Realtor",
+        desc: "A robust Real Estate API that empowers users to effortlessly create property listings, facilitate seamless communication with potential buyers, tenants, and fellow agents. In addition, our API offers an integrated wallet system leveraging Paystack for secure financial transactions.",
+        id: 109210291,
+        links: {
+          live: "https://daniel-realtor.onrender.com",
+          github: "/realtor-api",
+        },
+        image: "realtor.png",
+        tools: [
+          "Node JS",
+          "Express JS",
+          "Mongo DB",
+          "Typescript",
+          "Swagger UI",
+          "Paystack",
+        ],
+      },
+      {
         name: "Amado",
-        desc: "This is an e-commerce app which features great functionalities and sleek design. Users are able to view the list of products. Users can filter the products based on size, color and many other preferences. Products can be added to cart and the quantity added can be edited in the cart page",
+        desc: "This e-commerce app boasts a wide array of impressive features and a sleek, user-friendly design. Users can effortlessly browse through the extensive product catalog. With the ability to filter products based on size, color, and various other preferences, finding the perfect item is a breeze. Adding products to the cart is a simple process, and users have the flexibility to adjust the quantity of items in their cart directly from the cart page.",
         id: 13,
         links: {
           live: "https://daniel-amado.netlify.app",
@@ -110,9 +133,10 @@ export const projects: ProjectCategories[] = [
         image: "amado.png",
         tools: ["React JS", "Bootstrap", "Context API"],
       },
+
       {
         name: "Github Search",
-        desc: "This is a mini github clone, which uses the github api to provide results based on the users search input. The search results includes the related commits, topics, users and repositories. Ability to view users profile, their repositories, followers and people they follow",
+        desc: "This is a mini github clone, which leverages the github api to provide results based on the users search input. The search results includes the related commits, topics, users and repositories. Ability to view users profile, their repositories, followers and people they follow",
         id: 14,
         links: {
           live: "https://daniel-github-search.vercel.app",
@@ -140,7 +164,7 @@ export const projects: ProjectCategories[] = [
       },
       {
         name: "Holux",
-        desc: "Holux is a real estate landing page designed which supports accessibility and is well optimized. It also has cool animation on scroll",
+        desc: "Holux is a real estate landing page designed which supports accessibility and is well optimized.  it features captivating scroll animations that add a touch of elegance to your browsing journey",
         id: 1,
         links: {
           live: "https://daniel-holux.netlify.app",
@@ -151,7 +175,7 @@ export const projects: ProjectCategories[] = [
       },
       {
         name: "GPT-3",
-        desc: "GPT-3 is a landing page design for the OPEN-AI, it features their sponsors, blog posts and other sections",
+        desc: "GPT-3 is a landing page design for the OPEN-AI. This page showcases their sponsors, offers insightful blog posts, and provides various other engaging sections to explore.",
         id: 2,
         links: {
           live: "https://daniel-gpt3.vercel.app",
@@ -171,31 +195,10 @@ export const projects: ProjectCategories[] = [
         image: "hoobank.png",
         tools: ["React JS", "CSS"],
       },
-      {
-        name: "Fitbody",
-        desc: "Fitbody is a gym website built with next js.It features great UI designs and nice scroll animations",
-        id: 4,
-        links: {
-          live: "https://fitbody-beta.vercel.app",
-          github: "/Fitbody",
-        },
-        image: "fitbody.png",
-        tools: ["Next JS", "AOS", "CSS Modules"],
-      },
-      {
-        name: "Architect Website",
-        desc: "This is a landing page for an architectural company built with HTML, CSS and Javascript",
-        id: 5,
-        links: {
-          live: "https://daniel-architect.netlify.app",
-          github: "/Architect-Website",
-        },
-        image: "architect.png",
-        tools: ["HTML", "CSS", "Javascript"],
-      },
+
       {
         name: "NFT Marketplace",
-        desc: "NFT marketplace is a landing page for NFT Collections. It features a sleek design interface and a filter section where NFT Collections are filtered based on the user's selected category",
+        desc: "NFT marketplace is a landing page for NFT Collections. The inclusion of a filter section enables users to easily sort and discover NFT Collections based on their preferred categories.",
         id: 6,
         links: {
           live: "https://daniel-nft-marketplace.vercel.app",
@@ -235,7 +238,7 @@ export const projects: ProjectCategories[] = [
       },
       {
         name: "Bamidele Olaoluwa",
-        desc: "This is a 3D Designer portfolio. It features great UI and UX principles as well as mobile resposiveness",
+        desc: "This is a 3D Designer's portfolio, expertly designed to embody exceptional UI and UX principles. It offers a seamless and visually pleasing experience, with full mobile responsiveness to ensure accessibility from any device.",
         id: 19,
         links: {
           live: "https://bamidele-olaoluwa.netlify.app",
@@ -243,67 +246,6 @@ export const projects: ProjectCategories[] = [
         },
         image: "bamidele-olaoluwa.png",
         tools: ["React JS", "Context API", "Tailwind CSS"],
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Utilities & Games",
-    projects: [
-      {
-        name: "Text To List Converter",
-        desc: "This is a utility app converts list of items seperated by either a comma, space or new lines into HTML <li> tags out of the box",
-        id: 7,
-        links: {
-          live: "https://daniel-text-to-list.vercel.app",
-          github: "/text-to-HTML-list-converter",
-        },
-        image: "text-to-list.png",
-        tools: ["HTML", "CSS", "Javascript"],
-      },
-      {
-        name: "Memory Game",
-        desc: "This is a memory game built with React JS, CSS and Typescript. It features reusable codes and nice flip animations",
-        id: 8,
-        links: {
-          live: "https://daniel-memory-game.vercel.app",
-          github: "/Memory-Game",
-        },
-        image: "memory-game.png",
-        tools: ["React JS", "CSS", "Typescript"],
-      },
-      {
-        name: "Drink Water",
-        desc: "This is a game that fills a large drum of water based on the amount of smaller drums selected",
-        id: 9,
-        links: {
-          live: "https://drink-water-kappa.vercel.app",
-          github: "/Drink-Water",
-        },
-        image: "drink-water.png",
-        tools: ["HTML", "CSS", "Javascript"],
-      },
-      {
-        name: "Quiz App",
-        desc: "This is a quiz app built with HTML, CSS and Javascript. It tracks users scores and the time used and displays them to the user after the session",
-        id: 10,
-        links: {
-          live: "https://daniel-quiz-app.vercel.app",
-          github: "/Quiz-App",
-        },
-        image: "quiz-app.png",
-        tools: ["HTML", "CSS", "Javascript"],
-      },
-      {
-        name: "Button Editor",
-        desc: "This is a utility web app that allows you to customize your buttons to your taste. Properties like color, background, width and many more can be edited",
-        id: 11,
-        links: {
-          live: "https://daniel-button-editor.vercel.app",
-          github: "/Button-Editor",
-        },
-        image: "button-editor.png",
-        tools: ["Next JS", "Styled Components", "Typescript"],
       },
     ],
   },

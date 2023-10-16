@@ -20,6 +20,14 @@ import {
   TailwindCSS,
   Typescript,
   VSCode,
+  EJS,
+  ExpressJS,
+  Jest,
+  MongoDB,
+  NestJS,
+  NodeJs,
+  PostgreSQL,
+  SocketIO,
 } from "../components/Icons";
 import ScrollContainers from "../components/sections/ScrollContainers";
 import DisplayContainer from "../components/UI/displayContainers";
@@ -27,7 +35,7 @@ import { skillsProps, myDetailsProps, toolsProps } from "../types/types";
 
 const myDetails: myDetailsProps[] = [
   { question: "Full Name", answer: "Adejare Daniel Oluwdunsin" },
-  { question: "Age", answer: "16 years" },
+  { question: "Age", answer: "17 years" },
   { question: "Phone number", answer: "+2348023720580" },
   { question: "Email", answer: "adejaredaniel12@gmail.com" },
   { question: "Nationality", answer: "Nigerian" },
@@ -37,20 +45,8 @@ const myDetails: myDetailsProps[] = [
 
 const skills: skillsProps[] = [
   {
-    name: "HTML",
-    icon: <HTML5 size={27} fill={"#000"} />,
-  },
-  {
-    name: "CSS",
-    icon: <CSS3 size={27} fill={"#000"} />,
-  },
-  {
     name: "Javascript",
     icon: <Javascript size={27} fill={"#000"} />,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <TailwindCSS size={27} fill={"#000"} />,
   },
   {
     name: "React JS",
@@ -65,10 +61,6 @@ const skills: skillsProps[] = [
     icon: <NextJS size={27} fill={"#000"} />,
   },
   {
-    name: "Styled Components",
-    icon: <StyledComponents size={27} fill={"#000"} />,
-  },
-  {
     name: "Redux Toolkit",
     icon: <ReduxJS size={27} fill={"#000"} />,
   },
@@ -77,8 +69,28 @@ const skills: skillsProps[] = [
     icon: <Cypress size={27} fill={"#000"} />,
   },
   {
-    name: "Sass",
-    icon: <Sass size={27} fill={"#000"} />,
+    name: "Node JS",
+    icon: <NodeJs size={27} fill={"#000"} />,
+  },
+  {
+    name: "Express JS",
+    icon: <ExpressJS size={27} fill={"#000"} />,
+  },
+  {
+    name: "Nest JS",
+    icon: <NestJS size={27} fill={"#000"} />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <PostgreSQL size={27} fill={"#000"} />,
+  },
+  {
+    name: "Mongo DB",
+    icon: <MongoDB size={27} fill={"#000"} />,
+  },
+  {
+    name: "Jest",
+    icon: <Jest size={27} fill={"#000"} />,
   },
 ];
 
@@ -133,16 +145,14 @@ const About = () => {
             >
               <div className="flex flex-col gap-y-2 my-4 text-[17px] max-w-[600px] text-mainDarkColor">
                 <p>
-                  I am an innovative frontend developer with 2 years of
-                  experience in developing and maintaining web applications
-                  using HTML, CSS and JavaScript, as well as their frameworks
-                  and libraries. I am skilled in collaborating with
-                  cross-functional teams, integrating third-party services and
-                  APIs and optimizing web applications for performance.
-                </p>
-                <p>
-                  I understand the rudiments of web optimization and
-                  accesibility.
+                  I am a versatile full stack engineer with a diverse skill set,
+                  I have a proven history of crafting web solutions that leave a
+                  lasting impact on clients. My drive to harness the power of
+                  software development in solving problems is rivaled only by my
+                  unyielding pursuit of perfection. I have a sharp attention to
+                  detail and a strong focus on staying at the forefront of
+                  industry trends, I am wholeheartedly devoted to delivering
+                  exceptional outcomes that consistently surpass expectations
                 </p>
               </div>
             </Fade>

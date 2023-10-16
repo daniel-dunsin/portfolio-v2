@@ -1,10 +1,13 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import Container from "../components/sections/Container";
 import Title from "../components/UI/Title";
 import { BiEnvelope } from "react-icons/bi";
 import { Linkedin, Github, Twiiter } from "../components/Icons";
 import ScrollContainers from "../components/sections/ScrollContainers";
 import DisplayContainer from "../components/UI/displayContainers";
+import Loader from "../components/UI/Loader";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 type socialProps = {
   href: string;
@@ -31,9 +34,40 @@ const socials: socialProps[] = [
 ];
 
 const Contact = () => {
+  const [name, setName] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const submit = async (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setLoading(true);
+    const { data } = await axios.post("https://daniel-dunsin.onrender.com", {
+      name,
+      message,
+      email,
+    });
+
+    setLoading(false);
+
+    await Swal.fire({
+      title: "Message Sent",
+      text: "Your message has been received, i will respond as soon as possible, thank you!",
+      timer: 2000,
+      icon: "success",
+      showConfirmButton: false,
+    });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <Container nextPageLink="/" nextPageText="Back to home">
       <>
+        {loading && <Loader />}
         <Title
           text="Contact me."
           topOfPage={true}
@@ -44,22 +78,31 @@ const Contact = () => {
             return <DisplayContainer key={index} {...social} />;
           })}
         </ScrollContainers>
-        <form className="my-8 w-full max-w-[600px]">
+        <form onSubmit={submit} className="my-8 w-full max-w-[600px]">
           <input
             type="text"
             className="w-full p-3 bg-white rounded-[10px] placeholder:text-mainDarkColor text-mainDarkColor outline-none border-2 focus:border-mainDarkColor mb-6"
             placeholder="Your name..."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             className="w-full p-3 bg-white rounded-[10px] placeholder:text-mainDarkColor text-mainDarkColor outline-none border-2 focus:border-mainDarkColor mb-6"
             placeholder="Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             className="w-full p-3 bg-white rounded-[10px] placeholder:text-mainDarkColor text-mainDarkColor outline-none border-2 focus:border-mainDarkColor mb-6 h-[200px] resize-none"
             placeholder="Type your message.."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="w-full p-3 bg-mainDarkColor text-white active:scale-[0.97] rounded-[10px]">
+          <button
+            type="submit"
+            className="w-full p-3 bg-mainDarkColor text-white active:scale-[0.97] rounded-[10px]"
+          >
             Send
           </button>
         </form>
