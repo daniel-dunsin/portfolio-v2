@@ -43,7 +43,7 @@ const Contact = () => {
     e.preventDefault();
 
     setLoading(true);
-    const { data } = await axios.post("https://daniel-dunsin.onrender.com", {
+    const { data } = await axios.post("https://portfolio-mcj7.onrender.com", {
       name,
       message,
       email,
