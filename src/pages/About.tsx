@@ -180,7 +180,7 @@ const About = () => {
               triggerOnce={true}
               delay={2400}
             >
-              <a href="https://drive.google.com/file/d/1zNzHQwUMSspctu_PWfxhV_k0Y4-6iAHU/view?usp=drive_link">
+              <a href="https://drive.google.com/file/d/19EghT7kNtVYTmrTSUAVenFr_c35a__bg/view?usp=sharing">
                 <button className="mt-4 max-w-fit px-4 py-2 bg-mainDarkColor text-white text-[15px] rounded-md">
                   Download CV
                 </button>
