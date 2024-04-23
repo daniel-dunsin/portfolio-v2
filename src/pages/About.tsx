@@ -120,7 +120,7 @@ const About = () => {
         <div className="flex items-start justify-between gap-8  sl:flex-row flex-col">
           <div className="flex-1 sl:max-w-fit">
             <img
-              src={"./images/daniel-1.jpg"}
+              src={"./images/daniel.jpeg"}
               alt="daniel"
               loading="lazy"
               className="w-full sl:h-[450px] sl:max-w-[400px] object-cover object-center rounded-[10px]"
@@ -180,7 +180,7 @@ const About = () => {
               triggerOnce={true}
               delay={2400}
             >
-              <a href="https://drive.google.com/file/d/19EghT7kNtVYTmrTSUAVenFr_c35a__bg/view?usp=sharing">
+              <a href="https://docs.google.com/document/d/1CMBzN6QD0KZ27XpLV_ev-3CdBChRvDoc4lZxmIPR40M/edit?usp=sharing">
                 <button className="mt-4 max-w-fit px-4 py-2 bg-mainDarkColor text-white text-[15px] rounded-md">
                   Download CV
                 </button>

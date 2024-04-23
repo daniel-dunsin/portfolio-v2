@@ -14,10 +14,32 @@ const AppContext = createContext({} as IContext);
 
 const myExperience: myExperienceProps[] = [
   {
+    company: "Pendulum HQ",
+    start_date: "March 2024",
+    end_date: "Present",
+    position: "Backend Developer (Contract)",
+    works: [
+      "Collaborated with UI/UX designers, frontend developers and other backend developers to build a robust LMS platform that facilitates seamless learning of specialised programs and courses",
+      "Stayed in touch with client from start to finish, making sure they were part of the journey. Also, shared project ideas and progress with them and the project owner ",
+      "Developed a safe and secure payment gateway to receive and send payments",
+      "Developed a secure role-based authentication system",
+      "Integrated Google authentication and calendar apis to manage users schedules",
+      "Implemented CI/CD and containerization for smooth work environments and deployment",
+    ],
+    skillsets: [
+      "Node JS",
+      "Express JS",
+      "Typescript",
+      "Flutterwave",
+      "Mongo DB",
+      "Docker",
+    ],
+  },
+  {
     company: "Edssistance",
     start_date: "March 2023",
     end_date: "Present",
-    position: "Full stack developer (contract)",
+    position: "Full stack developer",
     works: [
       "Collaborated with UI/UX designers, software engineers and product manager to create an easy-to-use product",
       "Stayed in touch with clients from start to finish, making sure they were part of the journey. Also, shared project ideas and progress with them and the project owner.",
@@ -54,18 +76,6 @@ const myExperience: myExperienceProps[] = [
       "Cypress",
       "Git & Gitlab",
     ],
-  },
-  {
-    company: "Ominiversity",
-    start_date: "Oct 2022",
-    end_date: "Dec 2022",
-    position: "Frontend developer intern",
-    works: [
-      "Developed features to enhance user experience",
-      "Implementing & consuming backend APIs and data",
-      "Writing resuable codes for future use.",
-    ],
-    skillsets: ["React JS", "Sass", "Redux toolkit", "Git & Github"],
   },
 ];
 
